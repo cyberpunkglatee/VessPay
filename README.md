@@ -3,7 +3,7 @@
 This is the official website for VessPay, a premium African fintech platform focused on secure payments, wallets, FX, and global money movement.
 
 ## Tech Stack
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Styling**: Vanilla CSS Modules (no Tailwind dependency, though naming conventions are similar)
 - **Fonts**: Inter (Body), Outfit (Headings) via `next/font/google`
 - **Icons**: Lucide React
