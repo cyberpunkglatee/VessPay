@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
                 <div className="container">
                     <div className={styles.content}>
                         <h2>1. Introduction</h2>
-                        <p>VessPay Ghana Limited ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our mobile application and website.</p>
+                        <p>VessPay Ghana Limited (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our mobile application and website.</p>
 
                         <h2>2. Information We Collect</h2>
                         <p>To provide our services, we collect several types of information, including:</p>

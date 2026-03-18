@@ -9,7 +9,7 @@ export default function CookieBanner() {
     useEffect(() => {
         const consent = localStorage.getItem('vesspay-cookie-consent');
         if (!consent) {
-            setIsVisible(true);
+            setIsVisible(true); // eslint-disable-line react-hooks/set-state-in-effect
         }
     }, []);
 

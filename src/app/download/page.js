@@ -89,7 +89,7 @@ export default function Download() {
                             ) : (
                                 <div className={styles.success}>
                                     <CheckCircle2 size={48} className="text-gold" />
-                                    <h3>You're on the list!</h3>
+                                    <h3>You&apos;re on the list!</h3>
                                     <p>Thanks for joining. We&apos;ll be in touch soon with exciting updates.</p>
                                 </div>
                             )}
