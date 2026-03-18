@@ -28,13 +28,14 @@
 .storyContent h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: var(--royal-green);
+    color: var(--royal-gold) !important;
 }
 
 .storyContent p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    color: var(--foreground) !important;
 }
 
 .companyInfo {
@@ -134,11 +135,11 @@
 }
 
 .ctaCard {
-    background: var(--royal-green);
+    background-color: var(--royal-green-deep) !important;
     padding: 6rem;
     border-radius: 12px;
     text-align: center;
-    color: white;
+    color: #FFFFFF !important;
 }
 
 .ctaCard h2 {

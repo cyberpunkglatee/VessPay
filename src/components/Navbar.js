@@ -44,7 +44,7 @@ export default function Navbar() {
                     VessPay<span className="text-gold">.</span>
                 </Link>
 
-                <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
+                <div className={`${styles.navLinks} ${isMenuOpen ? styles.menuActive : ''}`}>
                     <Link href="/how-it-works" onClick={() => setIsMenuOpen(false)}>How It Works</Link>
                     <Link href="/features" onClick={() => setIsMenuOpen(false)}>Features</Link>
                     <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>

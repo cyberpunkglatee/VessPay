@@ -235,11 +235,11 @@
 }
 
 .trustOverlay {
-    background: var(--surface);
+    background-color: var(--surface) !important;
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-    color: var(--foreground);
+    color: var(--foreground) !important;
 }
 
 .trustOverlay p {
@@ -375,6 +375,12 @@
 
     .ctaCard h2 {
         font-size: 2rem;
+    }
+
+    .trustImage {
+        height: 500px;
+        padding: 2rem;
+        background-position: center 10%;
     }
 
     .visionCard {
