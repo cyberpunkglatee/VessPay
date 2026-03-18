@@ -38,7 +38,7 @@ export default function Audiences() {
                                 </div>
                                 <div className={styles.pain}>
                                     <div className={styles.xMark}>✕</div>
-                                    <p>Can't access MoMo for local services.</p>
+                                    <p>Can&apos;t access MoMo for local services.</p>
                                 </div>
                             </div>
                             <div className={styles.solution}>
@@ -71,7 +71,7 @@ export default function Audiences() {
                             <div className={styles.painPoints}>
                                 <div className={styles.pain}>
                                     <div className={styles.xMark}>✕</div>
-                                    <p>International cards don't work at local vendors.</p>
+                                    <p>International cards don&apos;t work at local vendors.</p>
                                 </div>
                                 <div className={styles.pain}>
                                     <div className={styles.xMark}>✕</div>

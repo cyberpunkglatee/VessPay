@@ -25,7 +25,7 @@ export default function Contact() {
                 <div className="container">
                     <div className={`${styles.heroContent} reveal`}>
                         <h1>Contact <span className="text-gradient-gold">Support</span></h1>
-                        <p>We're here to help you navigate your payments in Ghana. Reach out to us anytime.</p>
+                        <p>We&apos;re here to help you navigate your payments in Ghana. Reach out to us anytime.</p>
                     </div>
                 </div>
             </section>
@@ -67,7 +67,7 @@ export default function Contact() {
                                         <input type="email" required placeholder="john@example.com" />
                                     </div>
                                     <div className={styles.inputGroup}>
-                                        <label>What's your inquiry about?</label>
+                                        <label>What&apos;s your inquiry about?</label>
                                         <select>
                                             <option>Account Verification</option>
                                             <option>Loading Funds</option>
