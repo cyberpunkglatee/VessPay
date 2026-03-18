@@ -162,6 +162,9 @@
 
     .mobileToggle {
         display: flex;
-        z-index: 1001;
+        z-index: 4000;
+        position: relative;
+        padding: 1rem;
+        margin-right: -1rem;
     }
 }
