@@ -129,7 +129,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={`${styles.trustImage} reveal`}>
+            <div className={styles.trustImage}>
               <div className={styles.trustOverlay}>
                 <p>&quot;The only way I pay in Accra now. So simple!&quot;</p>
                 <span>— Sarah, Tourist from UK</span>

@@ -53,17 +53,17 @@ export default function Navbar() {
                     <Link href="/download" className="btn-luxury btn-primary-luxury" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
                 </div>
 
-                <div 
+                <button 
                     className={styles.mobileToggle} 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     aria-expanded={isMenuOpen}
                 >
                     <div className={`${styles.menuTrigger} ${isMenuOpen ? styles.triggerActive : ''}`}>
                         <span className={styles.menuLine}></span>
                         <span className={styles.menuLine}></span>
                     </div>
-                </div>
+                </button>
             </div>
         </nav>
     );

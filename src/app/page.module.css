@@ -235,10 +235,11 @@
 }
 
 .trustOverlay {
-    background: white;
+    background: var(--surface);
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    color: var(--foreground);
 }
 
 .trustOverlay p {

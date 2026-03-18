@@ -134,10 +134,11 @@
 }
 
 .ctaCard {
-    background: var(--light-green);
+    background: var(--royal-green);
     padding: 6rem;
     border-radius: 12px;
     text-align: center;
+    color: white;
 }
 
 .ctaCard h2 {
