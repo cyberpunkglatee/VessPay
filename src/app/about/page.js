@@ -26,10 +26,10 @@ export default function About() {
                         <div className={`${styles.storyContent} reveal`}>
                             <h2>The Vision Behind VessPay</h2>
                             <p>
-                                I'm Ernest Glate, a software engineer and entrepreneur building impactful technology from Accra, Ghana. I founded Lncksys, a registered Ghanaian software company, where I design and build scalable digital products that solve real problems.
+                                I&apos;m Ernest Glate, a software engineer and entrepreneur building impactful technology from Accra, Ghana. I founded Lncksys, a registered Ghanaian software company, where I design and build scalable digital products that solve real problems.
                             </p>
                             <p>
-                                VessPay was born from watching diaspora Ghanaians, tourists, and international visitors arrive in Ghana completely locked out of mobile money — the payment system that runs the entire economy. I built VessPay to fix that. It's a spend and send mobile wallet that lets anyone load foreign currency and instantly pay with MoMo in Ghana — no SIM card required.
+                                VessPay was born from watching diaspora Ghanaians, tourists, and international visitors arrive in Ghana completely locked out of mobile money — the payment system that runs the entire economy. I built VessPay to fix that. It&apos;s a spend and send mobile wallet that lets anyone load foreign currency and instantly pay with MoMo in Ghana — no SIM card required.
                             </p>
                             <p>
                                 My goal is to make it as easy to spend and send money across Africa as it is anywhere else in the world.

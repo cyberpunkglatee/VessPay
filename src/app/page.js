@@ -131,7 +131,7 @@ export default function Home() {
             </div>
             <div className={`${styles.trustImage} reveal`}>
               <div className={styles.trustOverlay}>
-                <p>"The only way I pay in Accra now. So simple!"</p>
+                <p>&quot;The only way I pay in Accra now. So simple!&quot;</p>
                 <span>— Sarah, Tourist from UK</span>
               </div>
             </div>
@@ -146,8 +146,8 @@ export default function Home() {
             <div className={styles.visionIcon}><Globe size={40} className="text-gold" /></div>
             <h2>Beyond Ghana</h2>
             <p className={styles.visionText}>
-              "We're starting in Ghana, but our roadmap includes other African countries.
-              This isn't just a Ghana product — it's the beginning of a pan-African diaspora wallet."
+                &quot;We&apos;re starting in Ghana, but our roadmap includes other African countries.
+                This isn&apos;t just a Ghana product — it&apos;s the beginning of a pan-African diaspora wallet.&quot;
             </p>
           </div>
         </div>

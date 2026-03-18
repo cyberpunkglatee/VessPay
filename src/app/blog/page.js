@@ -14,7 +14,7 @@ export default function Blog() {
             title: "How to pay MoMo in Ghana as a tourist (2025 guide)",
             category: "Ghana Payments",
             date: "March 10, 2025",
-            excerpt: "The complete guide to navigating Ghana's mobile money landscape without a local ID or SIM card."
+            excerpt: "The complete guide to navigating Ghana&apos;s mobile money landscape without a local ID or SIM card."
         },
         {
             title: "Top 5 payment mistakes visitors make in Ghana",
@@ -36,7 +36,7 @@ export default function Blog() {
                 <div className="container">
                     <div className={`${styles.heroContent} reveal`}>
                         <h1>VessPay <span className="text-gradient-gold">Blog</span></h1>
-                        <p>Insights, guides, and stories from the heart of Ghana's digital economy.</p>
+                        <p>Insights, guides, and stories from the heart of Ghana&apos;s digital economy.</p>
                     </div>
                 </div>
             </section>

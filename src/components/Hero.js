@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -30,9 +31,12 @@ export default function Hero() {
             </div>
 
             <div className={styles.visualWrapper}>
-                <img
+                <Image
                     src="/assets/luxury_hero.png"
                     alt="Luxury Banking Concept"
+                    width={1920}
+                    height={1080}
+                    priority
                     className={styles.heroImage}
                 />
             </div>

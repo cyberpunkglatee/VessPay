@@ -34,7 +34,7 @@ export default function Footer() {
                         <Link href="/download">Download App</Link>
                     </div>
                     <div className={styles.column}>
-                        <h4>Who It's For</h4>
+                        <h4>Who It&apos;s For</h4>
                         <Link href="/audiences#tourists">Tourists</Link>
                         <Link href="/audiences#expats">Expats</Link>
                         <Link href="/audiences#diaspora">Diaspora</Link>

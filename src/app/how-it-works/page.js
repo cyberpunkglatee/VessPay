@@ -102,7 +102,7 @@ export default function HowItWorks() {
                     <div className={styles.faqGrid}>
                         <div className={styles.faqItem}>
                             <h4>Do I need a Ghana Card?</h4>
-                            <p>No. VessPay is built specifically for visitors and the diaspora who don't have local IDs. You can sign up with your foreign passport.</p>
+                            <p>No. VessPay is built specifically for visitors and the diaspora who don&apos;t have local IDs. You can sign up with your foreign passport.</p>
                         </div>
                         <div className={styles.faqItem}>
                             <h4>Do I need a local SIM card?</h4>

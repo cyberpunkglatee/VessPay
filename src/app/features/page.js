@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Smartphone, Globe, Zap, Percent, ShieldCheck } from 'lucide-react';
+import { Smartphone, Globe, Zap, Percent, ShieldCheck, CreditCard } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -37,6 +37,13 @@ export default function Features() {
             description: 'See exactly what you get before you confirm. We use competitive mid-market rates with a simple, transparent 3% margin and zero hidden fees.',
             icon: <Percent size={40} />,
             image: '/mockups/transparent_fx.png',
+        },
+        {
+            id: 'card',
+            title: 'Physical Prestige',
+            description: 'The VessPay Black Card. A statement of utility and status, accepted at the world’s most exclusive establishments. Spend your GHS balance anywhere Visa is accepted, globally.',
+            icon: <CreditCard size={40} />,
+            image: '/assets/vesspay_card_glate.png',
         }
     ];
 
