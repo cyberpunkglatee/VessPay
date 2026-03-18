@@ -17,6 +17,18 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Body scroll lock
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
+
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <div className={`container ${styles.container}`}>
@@ -36,12 +48,17 @@ export default function Navbar() {
                     <Link href="/how-it-works" onClick={() => setIsMenuOpen(false)}>How It Works</Link>
                     <Link href="/features" onClick={() => setIsMenuOpen(false)}>Features</Link>
                     <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-                    <Link href="/audiences" onClick={() => setIsMenuOpen(false)}>Who It's For</Link>
+                    <Link href="/audiences" onClick={() => setIsMenuOpen(false)}>Who It&apos;s For</Link>
                     <Link href="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
                     <Link href="/download" className="btn-luxury btn-primary-luxury" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
                 </div>
 
-                <div className={styles.mobileToggle} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <div 
+                    className={styles.mobileToggle} 
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle menu"
+                    aria-expanded={isMenuOpen}
+                >
                     <div className={`${styles.menuTrigger} ${isMenuOpen ? styles.triggerActive : ''}`}>
                         <span className={styles.menuLine}></span>
                         <span className={styles.menuLine}></span>
