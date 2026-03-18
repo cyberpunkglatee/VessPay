@@ -1,0 +1,142 @@
+.footer {
+    background: var(--background);
+    padding: 8rem 0 4rem;
+    border-top: 1px solid rgba(27, 94, 32, 0.08);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+    opacity: 0.3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--royal-green-deep);
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footerLogoImage {
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socialLink {
+    color: var(--royal-green);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.linksGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.column h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--royal-gold);
+    margin-bottom: 0.5rem;
+}
+
+.column a {
+    text-decoration: none;
+    color: var(--royal-green);
+    font-size: 0.9375rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.column a:hover {
+    opacity: 1;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--royal-green);
+    opacity: 0.75;
+    font-size: 0.875rem;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.disclaimer p {
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .logo,
+    .socialLink,
+    .column a,
+    .disclaimer {
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 1024px) {
+    .linksGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .linksGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}

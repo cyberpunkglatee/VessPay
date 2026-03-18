@@ -1,0 +1,168 @@
+.hero {
+    padding: 12rem 0 6rem;
+    background: var(--royal-green-deep);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.storyContent h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--royal-green);
+}
+
+.storyContent p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.companyInfo {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--surface-muted);
+    border-radius: 8px;
+}
+
+.companyInfo p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.storyImage {
+    height: 500px;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: var(--light-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--royal-green);
+    opacity: 0.3;
+}
+
+.founderImageWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.founderImg {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.missionItem h3 {
+    font-size: 2rem;
+    color: white;
+    margin: 1.5rem 0;
+}
+
+.missionItem p {
+    font-size: 1.125rem;
+    opacity: 0.8;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sectionHeader h2 {
+    font-size: 3rem;
+}
+
+.partnerLogos {
+    display: flex;
+    justify-content: center;
+}
+
+.partnerLogo {
+    padding: 3rem 4rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+    background: var(--surface-muted);
+    transition: all 0.3s ease;
+}
+
+.partnerLogo:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ecobankText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--royal-green);
+}
+
+.ctaCard {
+    background: var(--light-green);
+    padding: 6rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.ctaCard h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+
+    .storyGrid,
+    .missionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .storyImage {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .storyContent h2 {
+        font-size: 2.25rem;
+    }
+}
