@@ -120,10 +120,11 @@
 }
 
 .ctaCard {
-    background: var(--light-green);
+    background-color: var(--royal-green-deep) !important;
     padding: 6rem;
     border-radius: 12px;
     text-align: center;
+    color: #FFFFFF !important;
 }
 
 .largeCheck {

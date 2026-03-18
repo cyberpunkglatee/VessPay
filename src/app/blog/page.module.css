@@ -92,7 +92,7 @@
 
 .postContent h3 a {
     text-decoration: none;
-    color: var(--royal-green-deep);
+    color: var(--royal-gold) !important;
 }
 
 .postContent p {
@@ -107,7 +107,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--royal-green);
+    color: var(--royal-gold) !important;
     text-decoration: none;
 }
 
