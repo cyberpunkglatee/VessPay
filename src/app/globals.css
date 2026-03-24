@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* VessPay Brand Colors */
   --royal-green: #1B5E20;
