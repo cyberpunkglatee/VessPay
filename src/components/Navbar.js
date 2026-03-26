@@ -124,6 +124,15 @@ export default function Navbar() {
                                 VessPay<span className="text-[#c9a84c]">.</span>
                             </span>
                         </div>
+
+                        {/* Dedicated Close Button for Mobile Menu */}
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            className="absolute top-8 right-6 w-11 h-11 flex items-center justify-center text-white/70 hover:text-[#c9a84c] transition-colors"
+                            aria-label="Close menu"
+                        >
+                            <X size={28} />
+                        </button>
                         {navLinks.map((link, i) => (
                             <motion.div
                                 key={link.name}
