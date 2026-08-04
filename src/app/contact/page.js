@@ -137,6 +137,8 @@ export default function Contact() {
                                onChange={(e) => setFormData({...formData, subject: e.target.value})}
                              >
                                 <option className="bg-[#1a3a2a]">General Inquiry</option>
+                                <option className="bg-[#1a3a2a]">API Integration</option>
+                                <option className="bg-[#1a3a2a]">Enterprise Payouts</option>
                                 <option className="bg-[#1a3a2a]">Account Verification</option>
                                 <option className="bg-[#1a3a2a]">Loading Funds</option>
                                 <option className="bg-[#1a3a2a]">Partnership</option>

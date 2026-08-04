@@ -3,23 +3,23 @@
 import { motion } from 'framer-motion';
 
 const trustSignals = [
-  "Powered by Ecobank",
-  "No SIM Card Required",
-  "MTN · Vodafone · AirtelTigo",
-  "iOS & Android",
-  "Instant MoMo Payments",
-  "33 African Countries",
+  "Ecobank 33-Country Infrastructure",
+  "Multi-Currency Wallet",
+  "B2B Payout API",
+  "Instant Settlement",
+  "No Local SIM Required",
+  "Bank-Grade Compliance",
 ];
 
 export default function TrustMarquee() {
   return (
     <div className="bg-[#1a3a2a] border-y border-white/5 py-8 overflow-hidden">
-      <motion.div 
+      <motion.div
         animate={{ x: [0, -1000] }}
-        transition={{ 
-          duration: 30, 
-          repeat: Infinity, 
-          ease: "linear" 
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear"
         }}
         className="flex whitespace-nowrap gap-12"
       >

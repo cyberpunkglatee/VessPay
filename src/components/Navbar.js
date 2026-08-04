@@ -31,10 +31,10 @@ export default function Navbar() {
     }, [isMenuOpen]);
 
     const navLinks = [
-        { name: 'HOW IT WORKS', href: '/how-it-works' },
-        { name: 'FEATURES', href: '/features' },
+        { name: 'PLATFORM', href: '/features' },
+        { name: 'FOR BUSINESS', href: '/docs/api' },
+        { name: 'FOR INDIVIDUALS', href: '/how-it-works' },
         { name: 'PRICING', href: '/pricing' },
-        { name: "WHO IT'S FOR", href: '/who-its-for' },
         { name: 'ABOUT', href: '/about' },
     ];
 
@@ -82,12 +82,20 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link
-                            href="/download"
-                            className="bg-[#1a3a2a] text-white border border-white/10 px-8 py-3 rounded-sm text-[11px] font-bold tracking-[0.2em] hover:bg-white hover:text-[#1a3a2a] transition-all duration-300"
-                        >
-                            GET STARTED
-                        </Link>
+                        <div className="flex items-center gap-3 ml-4">
+                            <Link
+                                href="/docs/api"
+                                className="border border-white/10 text-white/70 px-6 py-3 rounded-sm text-[10px] font-bold tracking-[0.15em] hover:border-[#c9a84c]/40 hover:text-[#c9a84c] transition-all duration-300"
+                            >
+                                VIEW API DOCS
+                            </Link>
+                            <Link
+                                href="/download"
+                                className="bg-[#c9a84c] text-[#1a3a2a] px-6 py-3 rounded-sm text-[10px] font-bold tracking-[0.15em] hover:bg-white transition-all duration-300"
+                            >
+                                JOIN WAITLIST
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Mobile Toggle */}
@@ -153,13 +161,21 @@ export default function Navbar() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: navLinks.length * 0.1 }}
+                            className="flex flex-col gap-4 mt-4 w-64"
                         >
+                            <Link
+                                href="/docs/api"
+                                onClick={() => setIsMenuOpen(false)}
+                                className="border border-white/10 text-white font-bold tracking-[0.15em] px-8 py-5 rounded-sm text-xs text-center hover:border-[#c9a84c]/40 hover:text-[#c9a84c] transition-all"
+                            >
+                                VIEW API DOCS
+                            </Link>
                             <Link
                                 href="/download"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="mt-4 bg-[#c9a84c] text-[#1a3a2a] px-12 py-5 rounded-sm font-bold tracking-[0.2em] text-sm block text-center"
+                                className="bg-[#c9a84c] text-[#1a3a2a] px-12 py-5 rounded-sm font-bold tracking-[0.2em] text-sm block text-center"
                             >
-                                GET STARTED
+                                JOIN WAITLIST
                             </Link>
                         </motion.div>
                     </motion.div>

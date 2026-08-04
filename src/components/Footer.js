@@ -22,8 +22,8 @@ export default function Footer() {
                             </span>
                         </Link>
                         <p className="text-white/40 text-sm leading-relaxed mb-8">
-                             Premium financial bridge for the African diaspora. 
-                             Regulated infrastructure, instant payments, absolute transparency.
+                            Africa&apos;s borderless financial ecosystem. Send and spend with one wallet 
+                            across Africa — jurisdictions are not a problem. Powered by Ecobank.
                         </p>
                         <div className="flex items-center gap-4">
                             {[Twitter, Linkedin, Instagram].map((Icon, i) => (
@@ -36,20 +36,29 @@ export default function Footer() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
                         <FooterColumn 
-                            title="Product" 
+                            title="Platform" 
                             links={[
-                                { name: 'How It Works', href: '/how-it-works' },
-                                { name: 'Features', href: '/features' },
+                                { name: 'Payout API', href: '/docs/api' },
+                                { name: 'Consumer Wallet', href: '/features' },
                                 { name: 'Pricing', href: '/pricing' },
-                                { name: 'Download App', href: '/download' },
+                                { name: 'Coverage', href: '/features#coverage' },
                             ]} 
                         />
                         <FooterColumn 
-                            title="Who It's For" 
+                            title="For Business" 
                             links={[
-                                { name: 'Tourists', href: '/who-its-for#tourists' },
-                                { name: 'Expats', href: '/who-its-for#expats' },
-                                { name: 'Diaspora', href: '/who-its-for#diaspora' },
+                                { name: 'API Documentation', href: '/docs/api' },
+                                { name: 'Integrations', href: '/docs/api#integrations' },
+                                { name: 'Compliance', href: '/legal/regulatory' },
+                                { name: 'Contact Sales', href: '/contact' },
+                            ]} 
+                        />
+                        <FooterColumn 
+                            title="For Individuals" 
+                            links={[
+                                { name: 'Wallet Features', href: '/features' },
+                                { name: 'How It Works', href: '/how-it-works' },
+                                { name: 'Download App', href: '/download' },
                             ]} 
                         />
                         <FooterColumn 
@@ -60,27 +69,30 @@ export default function Footer() {
                                 { name: 'Contact', href: '/contact' },
                             ]} 
                         />
-                        <FooterColumn 
-                            title="Legal" 
-                            links={[
-                                { name: 'Privacy Policy', href: '/legal/privacy' },
-                                { name: 'Terms of Service', href: '/legal/terms' },
-                                { name: 'Regulatory', href: '/legal/regulatory' },
-                            ]} 
-                        />
                     </div>
                 </div>
 
-                <div className="pt-12 border-t border-white/5 text-center lg:text-left">
+                <div className="pt-12 border-t border-white/5">
                     <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
-                        <div className="space-y-4 max-w-2xl">
+                        <div className="space-y-4 max-w-2xl text-center lg:text-left">
                             <p className="text-white/20 text-[10px] uppercase tracking-[0.2em] leading-relaxed">
                                 VessPay is a financial technology company, not a bank. VessPay Ghana Limited is a subsidiary of Lncksys.
-                                Banking services are provided by our regulated banking partners.
+                                Banking services are provided by Ecobank Ghana and its regulated banking partners across the Ecobank Group network.
                             </p>
                             <p className="text-white/40 text-xs font-bold font-sans uppercase tracking-widest">
                                 &copy; {new Date().getFullYear()} VessPay GHANA LIMITED. ALL RIGHTS RESERVED.
                             </p>
+                        </div>
+                        <div className="flex items-center gap-6">
+                            <Link href="/legal/privacy" className="text-white/30 text-[10px] font-bold tracking-widest uppercase hover:text-white/60 transition-colors">
+                                Privacy
+                            </Link>
+                            <Link href="/legal/terms" className="text-white/30 text-[10px] font-bold tracking-widest uppercase hover:text-white/60 transition-colors">
+                                Terms
+                            </Link>
+                            <Link href="/legal/regulatory" className="text-white/30 text-[10px] font-bold tracking-widest uppercase hover:text-white/60 transition-colors">
+                                Regulatory
+                            </Link>
                         </div>
                     </div>
                 </div>

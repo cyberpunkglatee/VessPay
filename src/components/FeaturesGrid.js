@@ -1,28 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Zap, Globe, Scale } from 'lucide-react';
+import { Globe, Wallet, TrendingUp, Shield } from 'lucide-react';
 
 const features = [
   {
     icon: <Globe size={24} />,
-    title: "No SIM Card Required",
-    description: "Access Ghana's MoMo ecosystem without the need for a local phone number or residency.",
+    title: "Unified Payout API",
+    description: "Single integration covers 33 African countries. Send payroll, contractor payments, or disbursements through one API endpoint.",
   },
   {
-    icon: <Zap size={24} />,
-    title: "Instant Transfers",
-    description: "Payments hit the recipient's MoMo wallet in seconds, not business days.",
+    icon: <Wallet size={24} />,
+    title: "Multi-Currency Wallet",
+    description: "Hold, convert, and spend in multiple currencies. Protect your earnings from local inflation by keeping balances in stable foreign currency.",
   },
   {
-    icon: <Scale size={24} />,
-    title: "Live FX Rates",
-    description: "Transparent market rates with a fixed 3% margin. No hidden fees or surprise costs.",
+    icon: <TrendingUp size={24} />,
+    title: "Real-Time FX Engine",
+    description: "Competitive wholesale rates with transparent margins. Bypass predatory FX bureaus and see exactly what you pay before you confirm.",
   },
   {
     icon: <Shield size={24} />,
-    title: "Bank-Grade Security",
-    description: "Built on Ecobank's regulated infrastructure with 256-bit encryption for every transaction.",
+    title: "Ecobank Settlement Layer",
+    description: "Built on Ecobank's regulated 33-country banking infrastructure. Bank-grade compliance, instant settlement, and institutional-level security.",
   },
 ];
 
@@ -30,6 +30,18 @@ export default function FeaturesGrid() {
   return (
     <section className="bg-[#0a1f12] py-32 px-6">
       <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <p className="text-[#c9a84c] text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Platform Capabilities</p>
+          <h2 className="text-4xl lg:text-6xl font-serif text-white mb-6">
+            Infrastructure that <span className="text-[#c9a84c]">scales</span>.
+          </h2>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-8">
           {features.map((feature, i) => (
             <motion.div

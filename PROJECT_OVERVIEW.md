@@ -1,21 +1,31 @@
-# VessPay - Comprehensive Project Overview
+# VessPay — Comprehensive Project Overview
 
-## 🏗️ Project Architecture
+## 🏗️ Platform Identity
 
-### Technology Stack
+**VessPay** is a B2B2C Hybrid Fintech Platform operating in direct sponsorship alliance with Ecobank Ghana / Ecobank Group. The platform serves two audiences through one product:
+
+- **Engine A — Consumer Wallet**: A multi-currency holding and local spending wallet for African remote workers, diaspora, and travelers. Hold foreign currency, shield cash from inflation, and spend locally across 33 African countries without a local SIM.
+- **Engine B — Enterprise Payout API**: A unified 33-country payout API for global B2B HR systems (payroll, EOR, contractor payments). Single integration, instant settlement, automated compliance.
+
+**Core Insight**: Both engines feed into the **same wallet product**. A remote worker paid by an international company via the API receives the same Borderless Multi-Country Wallet as a diaspora traveler who signed up directly.
+
+## 🏗️ Technology Stack
 - **Framework**: Next.js 16.1.7 (App Router)
 - **Language**: JavaScript (ESM)
-- **Styling**: CSS Modules with custom design system
+- **Styling**: Tailwind CSS 3.4 with custom design tokens
+- **Animation**: Framer Motion 12.x
 - **Icons**: Lucide React
 - **State Management**: React hooks (useState, useEffect)
-- **Build Tool**: Next.js built-in bundler
+- **Build Tool**: Turbopack (Next.js built-in)
 
 ### Key Dependencies
 - `next`: 16.1.7 - React framework with SSR capabilities
 - `react`: 19.2.3 - Core React library
 - `react-dom`: 19.2.3 - DOM-specific React methods
+- `framer-motion`: 12.38.0 - Animation library
 - `lucide-react`: 0.563.0 - Icon library
-- `eslint`: 9.x - Code linting
+- `clsx`: 2.1.1 - Conditional classnames
+- `tailwind-merge`: 3.5.0 - Tailwind class merging
 
 ## 📁 Project Structure
 
@@ -24,119 +34,108 @@ www.vesspay.com/
 ├── public/                 # Static assets
 │   ├── assets/            # Brand elements & security graphics
 │   ├── audiences/         # Target audience imagery
-│   ├── mockups/          # Feature mockups and visual assets
+│   ├── mockups/           # Feature mockups and visual assets
 │   └── various SVG files
 ├── src/
 │   ├── app/              # Next.js App Router pages
-│   │   ├── about/        # About page
-│   │   ├── audiences/    # Target audiences page
+│   │   ├── about/        # About page (founder, Ecobank alliance, roadmap)
 │   │   ├── blog/         # Blog page
-│   │   ├── contact/      # Contact page with layout
-│   │   ├── download/     # App download page
-│   │   ├── features/     # Features showcase
+│   │   ├── contact/      # Contact page
+│   │   ├── docs/
+│   │   │   └── api/      # Developer API documentation page
+│   │   ├── download/     # App download / waitlist page
+│   │   ├── features/     # Features (Platform/Business/Individual tabs)
 │   │   ├── how-it-works/ # How it works explanation
 │   │   ├── legal/        # Legal pages (privacy, terms, regulatory)
-│   │   ├── pricing/      # Pricing information
+│   │   ├── pricing/      # Pricing (Consumer Wallet + Enterprise API tiers)
+│   │   ├── who-its-for/  # Target audiences page
 │   │   ├── globals.css   # Global styles and design tokens
 │   │   ├── layout.js     # Root layout component
 │   │   └── page.js       # Homepage
-│   └── components/       # Reusable React components
-│       ├── CTASection.js              # Call-to-action section
-│       ├── CookieBanner.js            # GDPR cookie banner
-│       ├── FeaturesSection.js         # Features showcase
-│       ├── Footer.js                  # Site footer
-│       ├── Hero.js                    # Hero section
-│       ├── IdentitySection.js         # Brand identity section
-│       ├── KenteDivider.js            # Cultural divider component
-│       ├── Navbar.js                  # Navigation component (recently fixed)
-│       ├── WhatsAppButton.js          # WhatsApp integration
-│       └── *.module.css files         # Component-specific styles
-├── .gitignore           # Git ignore rules
-├── MAINTENANCE.md       # Maintenance guidelines
-├── README.md           # Project documentation
-├── eslint.config.mjs    # ESLint configuration
-├── jsconfig.json       # JavaScript configuration
-├── next.config.mjs     # Next.js configuration
-├── package.json        # Dependencies and scripts
-└── package-lock.json   # Lock file
+│   ├── components/       # Reusable React components
+│   │   ├── AppMockup.js              # Multi-currency wallet phone mockup
+│   │   ├── AudiencePanels.js         # 4-panel audience targeting
+│   │   ├── CTASection.js             # Dual CTA (waitlist + enterprise)
+│   │   ├── CookieBanner.js           # GDPR cookie banner
+│   │   ├── DualEngineSection.js      # Two-column ecosystem showcase (NEW)
+│   │   ├── FAQAccordion.js           # FAQ component
+│   │   ├── FeaturesGrid.js           # Platform capabilities grid
+│   │   ├── FeaturesSection.js        # Legacy features section
+│   │   ├── Footer.js                 # Site footer (B2B2C columns)
+│   │   ├── Hero.js                   # Legacy hero (unused)
+│   │   ├── HeroSection.js            # Main hero with B2B2C positioning
+│   │   ├── HowItWorksSection.js      # Tabbed individual/business flows
+│   │   ├── IdentitySection.js        # Brand identity section
+│   │   ├── KenteDivider.js           # Cultural divider component
+│   │   ├── Navbar.js                 # Navigation (dual CTAs)
+│   │   ├── PageHero.js               # Reusable page hero
+│   │   ├── StatsBar.js               # Animated statistics counter
+│   │   ├── TrustMarquee.js           # Scrolling trust signals
+│   │   ├── WhatsAppButton.js         # WhatsApp integration
+│   │   └── *.module.css files        # Component-specific styles
+│   └── lib/
+│       └── utils.js      # Utility functions (cn)
+├── .gitignore
+├── MAINTENANCE.md
+├── PROJECT_OVERVIEW.md
+├── README.md
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
+└── tailwind.config.mjs
 ```
 
 ## 🎨 Design System
 
-### Color Palette (from globals.css)
-- **Primary Colors**: Forest Green (#0C6B58) and Gold (#D4AF37)
-- **Secondary Colors**: Various shades for UI components
-- **Typography**: Inter (body) and Outfit (headings) fonts
-- **Spacing**: Consistent spacing system using CSS custom properties
+### Color Palette
+- **Primary**: Forest Green (#1a3a2a) and Gold (#c9a84c)
+- **Deep Background**: #0a1f12
+- **Surface**: White at 3-5% opacity for glassmorphism cards
+- **Border**: White at 5-6% opacity
+- **Typography**: Inter (body), Outfit (headings), Playfair Display (serif accents)
 
 ### Key Design Principles
 1. **Luxury Fintech Aesthetic**: Premium feel with African cultural elements
 2. **Mobile-First**: Responsive design optimized for all devices
-3. **Cultural Integration**: Incorporates Ghanaian patterns (Kente dividers)
+3. **Dual-Audience**: Clear visual pathways for enterprise and consumer users
 4. **Accessibility**: WCAG compliant with proper ARIA attributes
 
-## ⚙️ Core Features Implemented
+## ⚙️ Core Website Sections
 
-### 1. Navigation System
-- **Navbar Component**: Responsive navigation with mobile hamburger menu
-- **Recent Fix**: Mobile navigation bug resolved - menu now opens only on explicit tap, not scroll
-- **Accessibility**: Proper ARIA labels and keyboard navigation support
+### Homepage Flow
+1. **HeroSection** — "The Borderless Financial Ecosystem for Africa and the Diaspora" with dual CTAs
+2. **TrustMarquee** — Scrolling trust signals (Ecobank, Multi-Currency, API, etc.)
+3. **DualEngineSection** — Two-column interactive block showing Wallet + API sides
+4. **HowItWorksSection** — Tabbed flows for individuals and businesses
+5. **FeaturesGrid** — Platform capabilities (API, Wallet, FX Engine, Settlement)
+6. **AudiencePanels** — 4 audience panels (Diaspora, Remote Workers, EOR, Fintech)
+7. **StatsBar** — 33 Countries, 160+ Currency Pairs, 99.9% Uptime, 1B+ GHS
+8. **CTASection** — Dual layout: consumer waitlist form + enterprise API CTA
 
-### 2. FX Exchange Visualization (New Feature)
-- **Live Rate Display**: Simulated mid-market exchange rates
-- **Savings Comparison**: Before/after visual comparison showing customer savings
-- **Zero Fees Transparency**: Clear communication of no hidden fees
-- **Client-Side Rendering**: Proper SSR handling with dynamic imports
+### Sub-Pages
+- **/features** — 3-tab feature showcase (Platform, Business, Individual)
+- **/pricing** — Dual-tier pricing (Consumer Wallet + Enterprise API)
+- **/docs/api** — Developer API documentation with code examples
+- **/about** — Founder story, Ecobank alliance, roadmap
+- **/how-it-works** — Detailed how-it-works flow
+- **/who-its-for** — Target audience deep-dives
+- **/legal/** — Privacy, Terms, Regulatory
 
-### 3. Multi-Page Architecture
-- **Marketing Pages**: Home, About, Features, Pricing, How It Works
-- **Audience Targeting**: Specific pages for diaspora, expats, tourists
-- **Legal Compliance**: Privacy policy, terms of service, regulatory information
-- **Contact & Download**: User engagement and app download pathways
+## 🌐 Target Audiences & Value Propositions
 
-### 4. Responsive Design
-- **Mobile Navigation**: Hamburger menu with smooth animations
-- **Grid Systems**: CSS Grid and Flexbox for layout management
-- **Image Optimization**: Next.js Image component for performance
-- **Touch-Friendly**: Mobile-optimized touch targets and interactions
+### Consumer (Engine A — Wallet)
+| Audience | Value Proposition |
+|----------|------------------|
+| Diaspora & Travelers | Borderless wallet, spend locally, no SIM required |
+| Remote Workers | Get paid globally, hold USD, shield from inflation |
 
-## 🔧 Technical Implementation Details
-
-### Component Architecture
-- **Functional Components**: Modern React with hooks
-- **CSS Modules**: Scoped styling preventing conflicts
-- **Props Interface**: Clean component APIs
-- **State Management**: Local state with useState for component-specific data
-
-### Performance Optimizations
-- **Code Splitting**: Automatic with Next.js App Router
-- **Image Optimization**: Next.js Image component with lazy loading
-- **CSS Optimization**: Minimal, scoped styles with CSS Modules
-- **Bundle Analysis**: ESLint enforcement for code quality
-
-### Accessibility Features
-- **Semantic HTML**: Proper heading structure and landmarks
-- **ARIA Attributes**: Enhanced screen reader support
-- **Keyboard Navigation**: Full tab navigation support
-- **Color Contrast**: WCAG compliant contrast ratios
-
-## 🐛 Recent Bug Fixes & Improvements
-
-### Mobile Navigation Fix
-- **Problem**: Hamburger menu automatically appeared on scroll and became unresponsive
-- **Root Cause**: Scroll event listeners triggering menu state changes
-- **Solution**: Removed scroll-based triggers, implemented explicit tap-only behavior
-- **Files Modified**: 
-  - `src/components/Navbar.js` - State management and event handlers
-  - `src/components/Navbar.module.css` - Z-index and mobile styling fixes
-
-### FX Visualization SSR Fix
-- **Problem**: Build failures due to client-side features in server components
-- **Root Cause**: FX rate simulation requiring browser APIs
-- **Solution**: Created `FXVisualizationClient.js` with dynamic import and `ssr: false`
-- **Files Created**:
-  - `src/components/FXVisualization.js` - Main visualization component
-  - `src/components/FXVisualizationClient.js` - Client wrapper component
+### Enterprise (Engine B — API)
+| Audience | Value Proposition |
+|----------|------------------|
+| EOR & HR Platforms | Single API, 33 countries, automated payroll |
+| Fintech Partners | White-label wallet infrastructure, wholesale FX |
 
 ## 🚀 Development Workflow
 
@@ -150,77 +149,23 @@ npm run lint     # Run ESLint for code quality
 
 ### Git Integration
 - **Repository**: https://github.com/cyberpunkglatee/VessPay.git
-- **Recent Commits**: Navigation fixes and FX visualization feature implementation
 - **Branch Strategy**: Main branch with feature-based development
-
-## 🌐 Target Audience & Value Proposition
-
-### Primary Users
-1. **Ghanaian Diaspora**: Overseas Ghanaians sending money home
-2. **Expatriates**: Foreign workers in Ghana needing local payments
-3. **Tourists**: Visitors to Ghana requiring mobile money access
-
-### Core Value Propositions
-- **No Local SIM Required**: Access Ghana's MoMo ecosystem without Ghana Card
-- **Multi-Currency Support**: USD, GBP, EUR, CAD to GHS conversions
-- **Transparent Pricing**: 3% flat margin with no hidden fees
-- **Physical Card**: VessPay Black Card for global spending
-
-## 📊 Performance Metrics
-
-### Build Characteristics
-- **Bundle Size**: Optimized through code splitting
-- **Lighthouse Scores**: Target 90+ on all core web vitals
-- **First Contentful Paint**: <1.5s target
-- **Largest Contentful Paint**: <2.5s target
-
-### Browser Support
-- **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest 2 versions)
-- **Mobile Browsers**: iOS Safari, Chrome Mobile, Samsung Internet
-- **Progressive Enhancement**: Core functionality works without JavaScript
-
-## 🔮 Future Development Roadmap
-
-### Immediate Priorities
-1. **Payment Integration**: API connections to payment processors
-2. **User Authentication**: Login/registration system
-3. **Dashboard**: User account management interface
-4. **Transaction History**: Payment tracking and history
-
-### Long-term Vision
-1. **Pan-African Expansion**: Support for multiple African countries
-2. **Advanced FX Features**: Real-time rate alerts, limit orders
-3. **Mobile App**: Native iOS and Android applications
-4. **Business Accounts**: B2B payment solutions
+- **Deployment**: Vercel (vesspay.vercel.app)
 
 ## 🛡️ Security & Compliance
 
 ### Data Protection
 - **GDPR Compliance**: Cookie banner and privacy policy
-- **Data Encryption**: HTTPS enforcement and secure data handling
+- **Data Encryption**: HTTPS enforcement
 - **Privacy by Design**: Minimal data collection principles
 
 ### Financial Compliance
+- **Ecobank Sponsorship**: Regulated banking infrastructure
 - **Regulatory Pages**: Dedicated sections for legal compliance
 - **Transparency**: Clear terms of service and pricing disclosure
-- **Audit Trails**: Maintainable codebase for regulatory reviews
-
-## 📝 Maintenance Guidelines
-
-### Code Quality Standards
-- **ESLint Enforcement**: Zero warnings policy
-- **Component Documentation**: Self-documenting component structure
-- **Performance Budgets**: Strict bundle size limits
-- **Accessibility Testing**: Regular a11y audits
-
-### Deployment Process
-1. **Development**: Feature branches with thorough testing
-2. **Staging**: Pre-production environment for validation
-3. **Production**: Automated deployments with rollback capabilities
-4. **Monitoring**: Performance and error tracking
 
 ---
 
-*Last Updated: March 20, 2026*  
-*Project Status: Active Development*  
-*Version: 0.1.0*
+*Last Updated: August 4, 2026*
+*Project Status: Active Development — B2B2C Platform Pivot*
+*Version: 0.2.0*

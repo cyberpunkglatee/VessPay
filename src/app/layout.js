@@ -24,8 +24,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "VessPay | Pay Like a Local in Ghana",
-  description: "The mobile payment app for tourists, expats, and the diaspora. Send MoMo in Ghana without a local SIM or Ghana Card.",
+  title: "VessPay | Send & Spend With One Wallet Across Africa",
+  description: "The borderless financial ecosystem for Africa and the diaspora. One wallet to hold foreign currency, send and spend across 33 African countries — jurisdictions are not a problem. Enterprise Payout API + Consumer Wallet. Powered by Ecobank.",
+  keywords: "Africa payout API, multi-currency wallet, Ecobank, diaspora payments, remote worker payroll Africa, mobile money, cross-border payments Africa",
 };
 
 export default function RootLayout({ children }) {

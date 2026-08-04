@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 import PageHero from '@/components/PageHero';
 import Image from 'next/image';
-import { Target, Shield, Globe, Award, Briefcase } from 'lucide-react';
+import { Target, Shield, Globe, Award, Briefcase, Building2 } from 'lucide-react';
 
 const vision = [
-  { year: "2026", event: "Launch in Ghana with Ecobank integration.", active: true },
-  { year: "2027", event: "Expansion to Nigeria and MoMo network partners.", active: false },
-  { year: "2028", event: "Pan-African license and Kenya/East Africa rollout.", active: false },
+  { year: "2026", event: "Launch in Ghana with Ecobank integration. Wallet + Payout API go live.", active: true },
+  { year: "2027", event: "Expansion to Nigeria, Kenya, and East Africa. EOR platform partnerships.", active: false },
+  { year: "2028", event: "Full 33-country coverage. Enterprise API at scale. 1M+ wallet users.", active: false },
 ];
 
 export default function About() {
@@ -39,7 +39,7 @@ export default function About() {
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a2a] to-transparent opacity-60" />
                  <div className="absolute bottom-8 left-8">
-                    <p className="text-[#c9a84c] font-bold tracking-widest text-xs uppercase">Founder & CEO</p>
+                    <p className="text-[#c9a84c] font-bold tracking-widest text-xs uppercase">Founder &amp; CEO</p>
                     <h3 className="text-2xl font-serif">Ernest Glate</h3>
                  </div>
               </div>
@@ -56,7 +56,7 @@ export default function About() {
                 I&apos;m Ernest Glate, a software engineer and entrepreneur building impactful technology from Accra, Ghana. I founded Lncksys, a registered Ghanaian software company, where I design and build scalable digital products that solve real problems.
               </p>
               <p className="text-white/50 leading-relaxed">
-                VessPay was born from watching diaspora Ghanaians, tourists, and international visitors arrive in Ghana completely locked out of mobile money — the payment system that runs the entire economy. I built VessPay to fix that.
+                VessPay began as a simple idea: let diaspora Ghanaians and travelers use mobile money without a local SIM. But the problem is bigger than Ghana — across 33 African countries, there are millions of remote workers getting paid in foreign currency with no good way to hold, protect, and spend it locally. VessPay is the borderless financial ecosystem that serves both sides: consumers who need a multi-currency wallet, and the global platforms that pay them.
               </p>
               <div className="pt-6 border-t border-white/5 grid grid-cols-2 gap-8">
                  <div>
@@ -83,15 +83,71 @@ export default function About() {
               className="max-w-4xl mx-auto"
            >
               <h2 className="text-3xl lg:text-5xl font-serif leading-tight text-[#c9a84c] mb-12">
-                &quot;Make it as easy to spend and send money across Africa as it is anywhere else in the world.&quot;
+                &quot;Make it as easy to send and spend money across Africa as it is anywhere else in the world — jurisdictions are not a problem.&quot;
               </h2>
               <div className="w-20 h-1 bg-white/20 mx-auto" />
            </motion.div>
         </div>
       </section>
 
-      {/* Partner Cards */}
+      {/* Strategic Alliance Section */}
       <section className="py-32 px-6">
+         <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-20"
+            >
+              <p className="text-[#c9a84c] text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Strategic Alliance</p>
+              <h2 className="text-3xl lg:text-5xl font-serif mb-4">Why <span className="text-[#c9a84c]">Ecobank</span></h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+               <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 p-10 rounded-3xl border border-white/5 hover:border-[#c9a84c]/20 transition-all duration-500"
+               >
+                  <Globe size={32} className="text-[#c9a84c] mb-8" />
+                  <h3 className="text-xl font-serif mb-4">33-Country Network</h3>
+                  <p className="text-white/40 leading-relaxed text-sm">
+                     Ecobank operates in 33 African countries — the largest pan-African banking footprint. VessPay plugs directly into this infrastructure.
+                  </p>
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-white/5 p-10 rounded-3xl border border-white/5 hover:border-[#c9a84c]/20 transition-all duration-500"
+               >
+                  <Shield size={32} className="text-[#c9a84c] mb-8" />
+                  <h3 className="text-xl font-serif mb-4">Regulated Infrastructure</h3>
+                  <p className="text-white/40 leading-relaxed text-sm">
+                     Every transaction settles through Ecobank&apos;s regulated banking rails. Compliance, KYC, and anti-money laundering built into the infrastructure layer.
+                  </p>
+               </motion.div>
+               <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-white/5 p-10 rounded-3xl border border-white/5 hover:border-[#c9a84c]/20 transition-all duration-500"
+               >
+                  <Building2 size={32} className="text-[#c9a84c] mb-8" />
+                  <h3 className="text-xl font-serif mb-4">Sponsorship Alliance</h3>
+                  <p className="text-white/40 leading-relaxed text-sm">
+                     This is not a vendor relationship — it&apos;s a direct sponsorship alliance. VessPay operates as an Ecobank-sponsored fintech with direct access to settlement and treasury infrastructure.
+                  </p>
+               </motion.div>
+            </div>
+         </div>
+      </section>
+
+      {/* Partner Cards */}
+      <section className="py-32 px-6 bg-[#0a1f12]/30">
          <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
                <motion.div
@@ -114,9 +170,9 @@ export default function About() {
                   className="bg-white/5 p-12 rounded-3xl border border-white/5 hover:border-[#c9a84c]/20 transition-all duration-500"
                >
                   <Award size={32} className="text-[#c9a84c] mb-8" />
-                  <h3 className="text-2xl font-serif mb-4">Ecobank Partnership</h3>
+                  <h3 className="text-2xl font-serif mb-4">Ecobank Strategic Alliance</h3>
                   <p className="text-white/40 leading-relaxed">
-                     Trust is built on security. Our partnership with Ecobank ensures that VessPay operates within a regulated framework, utilizing bank-grade infrastructure for your peace of mind.
+                     VessPay runs in direct sponsorship alliance with Ecobank Ghana / Ecobank Group, offering the entire 33-country banking network as the settlement and compliance backbone for both the consumer wallet and enterprise payout API.
                   </p>
                </motion.div>
             </div>
